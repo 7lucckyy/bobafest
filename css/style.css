@@ -476,6 +476,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-size: cover;
   overflow: hidden;
   position: relative;
+  background-attachment: static;
+  background-position: center;
 }
 
 #intro:before {
@@ -1755,11 +1757,11 @@ body {
 
 /* External CSS*/
 .bg-cover {
-  background-attachment: static;
+  background-attachment: scroll;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 45rem;
+  height: 50rem;
 }
 
 
@@ -1792,3 +1794,17 @@ body {
     font-size: calc(3.375rem * var(--smaller));
   }
 }
+
+
+@media screen and (max-width: 480px) and (max-height: 480px) {
+  .intro .bg-cover {
+    background-image: url(../img/favicon.png);
+     content: 'Media Query: max-width: 600px, max-height: 480px';
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-attachment: scroll;
+     width: auto;
+  }
+}
+
